@@ -54,6 +54,7 @@ angular.module('hello',['ngRoute'])
             authenticate();
             $scope.credentials = {};
             $scope.login = function() {
+                console.log("Login called");
                 authenticate($scope.credentials, function() {
                     if ($rootScope.authenticated) {
                         $location.path("/");
